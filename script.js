@@ -2,7 +2,12 @@ var date;
 var second;
 var minute;
 var hour;
+var day;
+var month;
+var year;
 var browserHeight;
+var browserHeightForDateMobile;
+var browserHeightForDateDesktop;
 var secondsColor;
 var minutesColor;
 var hoursColor;
@@ -13,10 +18,18 @@ var ampm;
 var ampmColor;
 var backgroundColor;
 
-// Grabs users browser height to determine clock vertical positioning
+// Grabs users browser height to determine clock vertical positioning and date positioning for desktop and mobile
 function heightContainer() {
     browserHeight = parseInt(window.innerHeight);
     document.querySelector('.container').style.height = (browserHeight + 'px');
+
+    if (window.innerWidth < 1201) {
+    browserHeightForDateMobile =(parseInt(window.innerHeight) / 2);
+    document.querySelector('.container2').style.height = (browserHeightForDateMobile + 'px');
+    } else {
+    browserHeightForDateDesktop =(parseInt(window.innerHeight) / 3);
+    document.querySelector('.container2').style.height = (browserHeightForDateDesktop + 'px');
+    }
 }
 
 function displayTime() {
@@ -44,6 +57,44 @@ function displayTime() {
     } else {
         document.querySelector('#ampm').innerHTML = 'AM';
     }
+    if (month == 0) {
+        document.querySelector('#month').innerHTML = 'January&nbsp;';
+    }
+    if (month == 1) {
+        document.querySelector('#month').innerHTML = 'February&nbsp;';
+    }
+    if (month == 2) {
+        document.querySelector('#month').innerHTML = 'March&nbsp;';
+    }
+    if (month == 3) {
+        document.querySelector('#month').innerHTML = 'April&nbsp;';
+    }
+    if (month == 4) {
+        document.querySelector('#month').innerHTML = 'May&nbsp;';
+    }
+    if (month == 5) {
+        document.querySelector('#month').innerHTML = 'June&nbsp;';
+    }
+    if (month == 6) {
+        document.querySelector('#month').innerHTML = 'July&nbsp;';
+    }
+    if (month == 7) {
+        document.querySelector('#month').innerHTML = 'August&nbsp;';
+    }
+    if (month == 8) {
+        document.querySelector('#month').innerHTML = 'September&nbsp;';
+    }
+    if (month == 9) {
+        document.querySelector('#month').innerHTML = 'October&nbsp;';
+    }
+    if (month == 10) {
+        document.querySelector('#month').innerHTML = 'November&nbsp;';
+    }
+    if (month == 11) {
+        document.querySelector('#month').innerHTML = 'December&nbsp;';
+    }
+    document.querySelector('#day').innerHTML = (day + ',&nbsp;');
+    document.querySelector('#year').innerHTML = year;
 }
 
 function clockColor() {
@@ -82,7 +133,10 @@ setInterval(function () {
     second = date.getSeconds();
     minute = date.getMinutes();
     hour = date.getHours();
+    day = date.getDate();
+    month = date.getMonth();
+    year = date.getFullYear();
     heightContainer();
     clockColor();
     displayTime();
-}, 500);
+}, 100);

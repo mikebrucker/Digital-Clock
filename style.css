@@ -5,24 +5,42 @@ body {
     font-size: 68px;
 }
 
-.clockPosition {
-    position: fixed;
-    top: 25%;
-    text-align: center;    
-    margin: 0 auto;
-}
-
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100px;
     margin: 0px 8px;
 }
 
-#clock {
-    text-align: center;
+.container3{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+
+#date {
+    display: block;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#date > div {
+    vertical-align: text-top;
+}
+
+#day, #month, #year {
+    display: inline-block;
 }
 
 span {
@@ -36,7 +54,7 @@ span {
 #hours, #minutes, #seconds, #ampm {
     display: inline-block;
     font-family: 'Courier New', Courier, monospace;
-    border-radius: 36px;
+    border-radius: 10px;
 }
 
 @media all and (min-width: 440px) {
@@ -44,6 +62,14 @@ span {
     body {
         max-width: 400px;
         font-size: 76px;
+    }
+
+    #date {
+        font-size: 56px;
+    }
+
+    #hours, #minutes, #seconds {
+        border-radius: 12px;
     }
 }
 
@@ -53,6 +79,14 @@ span {
         max-width: 440px;
         font-size: 84px;
     }
+
+    #date {
+        font-size: 62px;
+    }
+
+    #hours, #minutes, #seconds {
+        border-radius: 16px;
+    }
 }
 
 @media all and (min-width: 600px) {
@@ -60,6 +94,14 @@ span {
     body {
         max-width: 560px;
         font-size: 108px;
+    }
+
+    #date {
+        font-size: 80px;
+    }
+
+    #hours, #minutes, #seconds {
+        border-radius: 18px;
     }
 }
 
@@ -69,6 +111,14 @@ span {
         max-width: 720px;
         font-size: 136px;
     }
+
+    #date {
+        font-size: 100px;
+    }
+
+    #hours, #minutes, #seconds {
+        border-radius: 20px;
+    }
 }
 
 @media all and (min-width: 992px) {
@@ -77,6 +127,14 @@ span {
         max-width: 900px;
         font-size: 166px;
     }
+
+    #date {
+        font-size: 122px;
+    }
+
+    #hours, #minutes, #seconds {
+        border-radius: 22px;
+    }
 }
 
 @media all and (min-width: 1200px) {
@@ -84,5 +142,13 @@ span {
     body {
         max-width: 1440px;
         font-size: 240px;
+    }
+
+    #date {
+        font-size: 180px;
+    }
+
+    #hours, #minutes, #seconds {
+        border-radius: 24px;
     }
 }
