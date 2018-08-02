@@ -7,6 +7,10 @@ var browserHeight;
 function displayTime() {
     if (hour < 10) {
         document.querySelector('#hours').innerHTML = ('&nbsp;' + hour);
+    } else if ((hour > 12) && (hour < 22)) {
+        document.querySelector('#hours').innerHTML = ('&nbsp;' + (hour - 12));
+    } else if (hour > 21) {
+        document.querySelector('#hours').innerHTML = (hour - 12);
     } else {
         document.querySelector('#hours').innerHTML = hour;
     }
@@ -19,6 +23,11 @@ function displayTime() {
         document.querySelector('#seconds').innerHTML = ('0' + second);
     } else {
         document.querySelector('#seconds').innerHTML = second;
+    }
+    if (hour > 11) {
+        document.querySelector('#ampm').innerHTML = 'PM';
+    } else {
+        document.querySelector('#ampm').innerHTML = 'AM';
     }
 }
 
