@@ -1,0 +1,95 @@
+body {
+    max-width: 360px;
+    margin: 0 auto;
+    font-family:   'Times New Roman', serif;
+    font-size: 77px;
+}
+
+.clockPosition {
+    position: fixed;
+    top: 25%;
+    text-align: center;    
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 0px 8px;
+}
+
+#clock {
+    text-align: center;
+}
+
+span {
+    vertical-align: text-top;
+}
+
+#hours {
+    
+}
+
+#minutes {
+    
+}
+
+#seconds {
+    
+}
+
+#hours, #minutes, #seconds {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media all and (min-width: 440px) {
+    
+    body {
+        max-width: 400px;
+        font-size: 86px;
+    }
+}
+
+@media all and (min-width: 480px) {
+    
+    body {
+        max-width: 440px;
+        font-size: 96px;
+    }
+}
+
+@media all and (min-width: 600px) {
+    
+    body {
+        max-width: 560px;
+        font-size: 124px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    
+    body {
+        max-width: 720px;
+        font-size: 160px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    
+    body {
+        max-width: 900px;
+        font-size: 200px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    
+    body {
+        max-width: 1440px;
+        font-size: 260px;
+    }
+}
