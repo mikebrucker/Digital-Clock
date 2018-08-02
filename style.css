@@ -29,18 +29,6 @@ span {
     vertical-align: text-top;
 }
 
-#hours {
-    
-}
-
-#minutes {
-    
-}
-
-#seconds {
-    
-}
-
 #ampm {
     font-size: 0.5em;
 }
@@ -48,6 +36,7 @@ span {
 #hours, #minutes, #seconds, #ampm {
     display: inline-block;
     font-family: 'Courier New', Courier, monospace;
+    border-radius: 36px;
 }
 
 @media all and (min-width: 440px) {
