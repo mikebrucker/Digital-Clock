@@ -32,6 +32,7 @@ function heightContainer() {
     }
 }
 
+// Displays hours minutes seconds month day and year
 function displayTime() {
     if (hour < 10) {
         document.querySelector('#hours').innerHTML = ('&nbsp;' + hour);
@@ -97,6 +98,7 @@ function displayTime() {
     document.querySelector('#year').innerHTML = year;
 }
 
+// Changes colors of various backgrounds and fonts by inserting the date variables into rgb color format
 function clockColor() {
     secondsColor = ("rgb(0, 0, ") + ((second * 4) + 19) + (", 0." + (second +41) +")");
     document.querySelector('#seconds').style.backgroundColor = secondsColor;
@@ -127,7 +129,7 @@ function clockColor() {
     document.querySelector('body').style.background = backgroundColor;
 }
 
-
+// Runs each function and grabs the date and time and puts them into variables
 setInterval(function () {
     date = new Date();
     second = date.getSeconds();

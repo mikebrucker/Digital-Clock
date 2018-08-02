@@ -5,12 +5,11 @@ body {
     font-size: 68px;
 }
 
-.container {
+.container, .container2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0px 8px;
 }
 
 .container3{
@@ -18,33 +17,19 @@ body {
     top: 0%;
     left: 0%;
     width: 100%;
-    margin: 0px auto;
-}
-
-.container2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px auto;
 }
 
 #date {
-    display: block;
     font-size: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#date > div {
+#date > div, span {
     vertical-align: text-top;
 }
 
-#day, #month, #year {
+#hours, #minutes, #seconds, #ampm, #day, #month, #year {
     display: inline-block;
-}
-
-span {
-    vertical-align: text-top;
 }
 
 #ampm {
@@ -52,7 +37,6 @@ span {
 }
 
 #hours, #minutes, #seconds, #ampm {
-    display: inline-block;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 10px;
 }
